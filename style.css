@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
+}
+body{
+    background: #1a365d;
+}
+.footer{
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    background: #001f4d;
+    border: 1px solid #3182ce;
+    border-radius: 5px;
+    max-width: 400px;
+    margin:50px auto 20px;
+}
+.footer-link{
+    color: #3182ce;
+    text-decoration: none;
+}
+.app-container{
+    max-width: 1200px;
+    min-height: 90vh;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #3182ce;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+.wrapper{
+    margin-top: 30px;
+    flex: 1;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto,265px);
+}
+.wrapper li{
+    height: 250px;
+    list-style: none;
+    border-radius: 5px;
+    padding: 15px 20px 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+.add-box,
+.icon,
+.bottom-content,
+.pop-up,
+header,
+.settings .menu li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.add-box{
+    cursor: pointer;
+flex-direction: column;
+justify-content: center;
+}
+.add-box icon{
+height: 78px;
+width: 78px;
+color: #3182ce;
+font-size: 40px;
+border-radius: 50%;
+justify-content: center;
+border: 2px dashed #3182ce;
+}
+.add-box p{
+    color: #3182ce;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.note{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.note .details{
+    max-height: 165px;
+    overflow-y: auto;
+}
+.note .details::-webkit-scrollbar, .pop-up textarea::-webkit-scrollbar{
+    width: 0;
+}
+.note .details:hover::-webkit-scrollbar, .pop-up textarea:hover::-webkit-scrollbar{
+    width: 5px;
+}
+.note .details:hover::-webkit-scrollbar-track, .pop-up textarea:hover::-webkit-scrollbar-track{
+    background: #e6e6e6;
+    border-radius: 25px;
+}
+.note p{
+    font-size: 22px;
+    font-weight: 500px;
+}
+.note span{
+    display: block;
+    color: #575757;
+    font-size: 16px;
+    margin-top: 6px;
+}
+.note .bottom-content{
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+.bottom-content span{
+    color:#6d6d6d;
+    cursor: pointer;
+    font-size: 14px;
+}
+.bottom-content .settings{
+    position: relative;
+}
+.bottom-content .settings i{
+    color: #6d6d6d;
+    cursor: pointer;
+    font-size: 14px;
+}
+.settings .menu{
+    z-index: 1;
+    bottom: 0;
+    right: -5px;
+    padding: 5px 0;
+    background: #fff;
+    position: absolute;
+    border-radius: 4px;
+    transform: scale(0);
+    transform-origin: bottom right;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+.settings .show .menu{
+    transform: scale(1);
+}
+.settings .menu li{
+    height: 25px;
+    font-size: 16px;
+    margin-bottom: 2px;
+    padding: 17px 15px;
+    cursor: pointer;
+    box-shadow: none;
+    border-radius: 0;
+    justify-content: flex-start;
+}
+.menu li:last-child{
+    margin-bottom: 0;
+}
+.menu li:hover{
+    background: #f5f5f5;
+}
+.menu li i{
+    padding-right: 8px;
+}
+.pop-up-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100;
+    width: 100;
+    background: rgba(0, 0, 0, 0.4);
+
+}
+.pop-up-box .pop-up{
+    position: absolute;
+    top: 50;
+    left: 50;
+    z-index: 3;
+    width: 100;
+    max-width: 400px;
+    justify-content: center;
+    transform: translate(-50%,-50%) scale(0.95);
+}
+.pop-up-box , .pop-up{
+    opacity: 1;
+    pointer-events: none;
+    transition: all 0.25s ease;
+}
+.pop-up-box .show , .pop-up-box .show .pop-up{
+    opacity: 1;
+    pointer-events: auto;
+}
+.pop-up-box .show .pop-up{
+    transform: translate(-50%,-50%) scale(1);
+}
+.pop-up .content{
+    border-radius: 5px;
+    background: #fff;
+    width: calc(100% -15px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.content header{
+    padding: 15px 25px;
+    border-bottom: 1px solid #ccc;
+}
+.content header p{
+    font-size: 20px;
+    font-weight: 500;
+
+}
+.content header i{
+    color:#8b8989;
+cursor:pointer;
+font-size: 23px;
+}
+.content form{
+    margin:15px 25px 35px;
+}
